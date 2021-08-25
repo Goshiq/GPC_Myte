@@ -1,13 +1,13 @@
-package me.myte.gpc.restservice;
+package me.myte.gpc.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GoshiqApplication {
+public class GpcApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GoshiqApplication.class, args);
+		SpringApplication.run(GpcApplication.class, args);
 	}
 
 }

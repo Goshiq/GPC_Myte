@@ -25,9 +25,25 @@ public class RequestController {
     }
 
     @GetMapping("/search/{request}")
-    public List<Request> findByName(@PathVariable("request") String request) {
+    public Place findByName(@PathVariable("request") String request) {
+        Place place;
         requestService.add(new Request(request));
-        Place place = placeService.findByString(request);
-        return requestService.findAll();
+        String[] array = request.split(" ");
+        if (array.length == 0) {
+            return null;
+        }
+        else if (array.length == 2) {
+            try {
+                Double[] ans = new Double[] {Double.parseDouble(array[0]), Double.parseDouble(array[1])};
+                place = placeService.findByCoordinates(ans);
+            }
+            catch (NumberFormatException e) {
+                place = placeService.findByString(request);
+            }
+        }
+        else {
+            place = placeService.findByString(request);
+        }
+        return place;
     }
 }

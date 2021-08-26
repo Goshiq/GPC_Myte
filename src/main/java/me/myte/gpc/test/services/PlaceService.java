@@ -20,7 +20,7 @@ public class PlaceService {
         return (place.orElse(null));
     }
 
-    public Place    findByCoordinates(double[] coordinates) {
+    public Place    findByCoordinates(Double[] coordinates) {
         return (ExternalAPI.findByCoordinates(coordinates));
     }
 

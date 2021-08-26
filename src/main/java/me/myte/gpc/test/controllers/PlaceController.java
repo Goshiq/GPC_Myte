@@ -3,6 +3,7 @@ package me.myte.gpc.test.controllers;
 import me.myte.gpc.test.models.Place;
 import me.myte.gpc.test.services.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

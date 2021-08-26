@@ -19,6 +19,11 @@ public class Place {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long    id;
 
+    public Place(String name) {
+        this();
+        this.name = name;
+    }
+
     private String  name;
 
     private Double  longitude;

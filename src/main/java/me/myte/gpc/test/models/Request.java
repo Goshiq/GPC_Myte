@@ -14,13 +14,22 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
+@Data
 @AllArgsConstructor
-@NoArgsConstructor
 public class Request {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    public Request() {
+        date = new Date();
+    }
+
+    public Request(String requestText) {
+        this();
+        this.requestText = requestText;
+    }
 
     private Date date;
 

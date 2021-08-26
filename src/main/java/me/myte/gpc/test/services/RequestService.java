@@ -12,7 +12,11 @@ import java.util.List;
 public class RequestService {
     private final RequestRepository requestRepository;
 
-    public List<Request> getAllRequests() {
+    public List<Request> findAll() {
         return requestRepository.findAll();
+    }
+
+    public void add(Request request) {
+        requestRepository.save(request);
     }
 }

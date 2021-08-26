@@ -17,7 +17,15 @@ public class PlaceService {
 
     public Place    findById(long id) {
         Optional<Place> place = placeRepository.findById(id);
-        return (place.orElse(new Place()));
+        return (place.orElse(null));
+    }
+
+    public Place    findByCoordinates(double[] coordinates) {
+        return (ExternalAPI.findByCoordinates(coordinates));
+    }
+
+    public Place    findByString(String request) {
+        return (ExternalAPI.findByName(request));
     }
 
     public List<Place> findAll() {

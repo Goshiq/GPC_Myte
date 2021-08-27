@@ -13,7 +13,7 @@ public class ExternalAPI {
     private static String url;
     private static Mono<Place> newPlace;
 
-    public static Place findByName(String name) {
+    public static Place findByAddress(String name) {
         url = prefix + "q=" + name + "&fields=items.point&key=" + key;
         newPlace = WebClient.create()
                 .get()

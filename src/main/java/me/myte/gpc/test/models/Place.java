@@ -20,10 +20,10 @@ public class Place {
     private long    id;
 
     public Place(String name) {
-        this.adress = name;
+        this.address = name;
     }
 
-    private String  adress;
+    private String  address;
 
     private Double  longitude;
 

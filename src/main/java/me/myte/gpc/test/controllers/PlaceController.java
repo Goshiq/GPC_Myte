@@ -6,16 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/place")
+@RequestMapping("/place/show")
 public class PlaceController {
 
     @Autowired
@@ -26,9 +23,21 @@ public class PlaceController {
         return service.findAll();
     }
 
-    @GetMapping("/{id}")
-    public Place findById(@PathVariable("id") long id) {
-        return service.findById(id);
+    @GetMapping("{id}")
+    public ResponseEntity<Place> findById(@PathVariable("id") String strId) {
+        long id;
+
+        try {
+            id = Long.parseLong(strId);
+        }
+        catch (NumberFormatException e) {
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
+        Place ans = service.findById(id);
+        if (ans == null) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(ans, HttpStatus.OK);
     }
 
 }

@@ -21,11 +21,19 @@ public class PlaceService {
     }
 
     public Place    findByCoordinates(Double[] coordinates) {
-        return (ExternalAPI.findByCoordinates(coordinates));
+        Place place = ExternalAPI.findByCoordinates(coordinates);
+        if (place.getAdress() != null) {
+            placeRepository.save(place);
+        }
+        return place;
     }
 
     public Place    findByString(String request) {
-        return (ExternalAPI.findByName(request));
+        Place place = ExternalAPI.findByName(request);
+        if (place.getLatitude() != null) {
+            placeRepository.save(place);
+        }
+        return place;
     }
 
     public List<Place> findAll() {

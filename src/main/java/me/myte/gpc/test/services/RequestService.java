@@ -28,7 +28,7 @@ public class RequestService {
 
     public Place findByCoordinates(Double[] coordinates) {
         Place place = ExternalAPI.findByCoordinates(coordinates);
-        if (place.getAddress() != null) {
+        if (place != null && place.getAddress() != null) {
             log.info("Saving the result to the base");
             placeRepository.save(place);
         }
@@ -37,7 +37,7 @@ public class RequestService {
 
     public Place findByString(String request) {
         Place place = ExternalAPI.findByAddress(request);
-        if (place.getLatitude() != null) {
+        if (place != null && place.getLatitude() != null) {
             log.info("Saving the result to the base");
             placeRepository.save(place);
         }

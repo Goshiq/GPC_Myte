@@ -25,6 +25,12 @@ public class Place {
         this.address = name;
     }
 
+    public Place(String address, Double longitude, Double latitude) {
+        this.address = address;
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
+
     private String  address;
 
     private Double  longitude;

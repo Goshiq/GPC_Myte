@@ -54,7 +54,7 @@ public class RequestController {
     }
 
     @GetMapping("/new/{request}")
-    public Place findByName(@PathVariable("request") String request) {
+    public ResponseEntity<Place> findRequest(@PathVariable("request") String request) {
         request = request.trim();
         log.info("Request to search: " + request);
         log.info("Saving the request to the base");
@@ -81,6 +81,9 @@ public class RequestController {
             log.info("Searching by the address: " + request);
             place = requestService.findByString(request);
         }
-        return place;
+        if (place != null) {
+            return new ResponseEntity<>(place, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 }

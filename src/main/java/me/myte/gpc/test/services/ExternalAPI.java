@@ -1,10 +1,6 @@
 package me.myte.gpc.test.services;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import me.myte.gpc.test.models.Place;
-import net.minidev.json.JSONObject;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
@@ -23,10 +19,8 @@ public class ExternalAPI {
 
     private static String url;
     private static Mono<String> newPlace;
-    private static ObjectMapper mapper = new ObjectMapper();
-    private static Place ans;
 
-    public static Place findByAddress(String address) {
+    public static List<Place> findByAddress(String address) {
         url = prefix + address;
         newPlace = WebClient.create()
                 .get()
@@ -37,7 +31,7 @@ public class ExternalAPI {
         return parseResponse(response);
     }
 
-    public static Place findByCoordinates(Double[] coords) {
+    public static List<Place> findByCoordinates(Double[] coords) {
         url = prefix + coords[0] + "," + coords[1];
         newPlace = WebClient.create()
                 .get()
@@ -48,19 +42,20 @@ public class ExternalAPI {
         return parseResponse(response);
     }
 
-    private static Place parseResponse(String response) {
+    private static List<Place> parseResponse(String response) {
         List<Place> ans = new ArrayList<>();
-        String expression = "},\"name\":\"(.+?)\",\"description\":\"(.+?)\".+?}},\"Point\":\\{\"pos\":\"([\\d.]+ [\\d.]+)";
+        String expression = "},\"name\":\"(.+?)\",(\"description\":\"(.+?)\")?.+?}},\"Point\":\\{\"pos\":\"([\\d.]+ [\\d.]+)";
         Pattern pattern = Pattern.compile(expression);
         Matcher matcher = pattern.matcher(response);
         while (matcher.find()) {
             String name = matcher.group(1);
-            String description = matcher.group(2);
-            String[] point = matcher.group(3).split(" ");
-            Double[] coords = new Double[]{Double.parseDouble(point[0]), Double.parseDouble(point[1])};
-            ans.add(new Place(name + " " + description, Double.parseDouble(point[0]), Double.parseDouble(point[1])));
+            String description = matcher.group(3);
+            if (description != null){
+                name += " " + description;
+            }
+            String[] point = matcher.group(4).split(" ");
+            ans.add(new Place(name, Double.parseDouble(point[0]), Double.parseDouble(point[1])));
         }
-        System.out.println(ans);
-        return null;
+        return ans;
     }
 }

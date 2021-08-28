@@ -26,20 +26,20 @@ public class RequestService {
         return ans.get();
     }
 
-    public Place findByCoordinates(Double[] coordinates) {
-        Place place = ExternalAPI.findByCoordinates(coordinates);
-        if (place != null && place.getAddress() != null) {
-            log.info("Saving the result to the base");
-            placeRepository.save(place);
+    public List<Place> findByCoordinates(Double[] coordinates) {
+        List<Place> place = ExternalAPI.findByCoordinates(coordinates);
+        if (place != null && place.size() != 0) {
+            log.info("Saving the results to the base: " + place.size());
+            placeRepository.saveAll(place);
         }
         return place;
     }
 
-    public Place findByString(String request) {
-        Place place = ExternalAPI.findByAddress(request);
-        if (place != null && place.getLatitude() != null) {
-            log.info("Saving the result to the base");
-            placeRepository.save(place);
+    public List<Place> findByString(String request) {
+        List<Place> place = ExternalAPI.findByAddress(request);
+        if (place != null && place.size() != 0) {
+            log.info("Saving the results to the base: " + place.size());
+            placeRepository.saveAll(place);
         }
         return place;
     }

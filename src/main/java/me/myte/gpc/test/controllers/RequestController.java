@@ -25,7 +25,7 @@ public class RequestController {
 
     @GetMapping("/show")
     public List<Request> showAll() {
-        log.info("Searching all the requests from the base");
+        log.info("Showing all the requests from the base");
         List<Request> ans = requestService.findAll();
         log.info("FOUND: " + ans.size());
         return ans;

@@ -8,6 +8,7 @@ import me.myte.gpc.test.repositories.PlaceRepository;
 import me.myte.gpc.test.repositories.RequestRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,18 +29,24 @@ public class RequestService {
 
     public List<Place> findByCoordinates(Double[] coordinates) {
         List<Place> place = ExternalAPI.findByCoordinates(coordinates);
-        if (place != null && place.size() != 0) {
+        if (place.size() != 0) {
             log.info("Saving the results to the base: " + place.size());
             placeRepository.saveAll(place);
+        }
+        else {
+            log.warn("Nothing found");
         }
         return place;
     }
 
     public List<Place> findByString(String request) {
         List<Place> place = ExternalAPI.findByAddress(request);
-        if (place != null && place.size() != 0) {
+        if (place.size() != 0) {
             log.info("Saving the results to the base: " + place.size());
             placeRepository.saveAll(place);
+        }
+        else {
+            log.warn("Nothing found");
         }
         return place;
     }

@@ -87,7 +87,7 @@ If you need to update *.jar file:
   ```
 * **In addition:**
 
-  * **To monitor the applicaton by Actuator. All metrics are enabled:**
+  * **To monitor the application by Actuator. All metrics are enabled:**
   ```http
 	http://localhost:8080/actuator
   ```

@@ -2,14 +2,16 @@
 
 Geo-position converter for Myte contest\
 	https://myte.me/tasks/RtngmS04tLWEPKTfvUd0
+
 ----
 
-You can use Docker to start the geocoder @localhost
+You can use Docker to start the geocoder @localhost:8080
 - Get the project to local machine.
 - Start the script from root:
 ```bash
 ./Dockerize/start_app.sh
 ```
+- Now you can send GET-requests
 
 ----
 **GPC_Myte API**

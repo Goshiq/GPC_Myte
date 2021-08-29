@@ -32,7 +32,9 @@ https://myte.me/tasks/RtngmS04tLWEPKTfvUd0
 
   * **Code:** 200 <br />
     **Content:**\
-	```[{"id":248,"address":"Центральный Дарфур Судан","longitude":23.496155,"latitude":12.430016},{"id":249,"address":"Судан","longitude":30.296725,"latitude":17.977449}]```
+	```json
+	[{"id":248,"address":"Центральный Дарфур Судан","longitude":23.496155,"latitude":12.430016},{"id":249,"address":"Судан","longitude":30.296725,"latitude":17.977449}]
+	```
 
 * **Error Response:**
 

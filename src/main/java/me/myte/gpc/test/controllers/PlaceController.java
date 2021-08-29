@@ -15,8 +15,11 @@ import java.util.List;
 @RequestMapping("/place/show")
 public class PlaceController {
 
-    @Autowired
-    private PlaceService service;
+    private final PlaceService service;
+
+    public PlaceController(PlaceService service) {
+        this.service = service;
+    }
 
     @GetMapping
     public List<Place> findAll() {

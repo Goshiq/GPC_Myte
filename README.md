@@ -49,7 +49,7 @@ You can use Docker to start the geocoder @localhost:8080
   * **Code:** 200 <br />
     **Content:**
 	```json
-	[{"id":248,"address":"Центральный Дарфур Судан","longitude":23.496155,"latitude":12.430016},{"id":249,"address":"Судан","longitude":30.296725,"latitude":17.977449}]
+	[{"address":"Уаддаи Чад","longitude":21.274999,"latitude":12.799513},{"address":"Чад","longitude":18.724699,"latitude":15.339032}]
 	```
 
 * **Error Response:**
@@ -66,7 +66,7 @@ You can use Docker to start the geocoder @localhost:8080
 
   Result:
   ```json
-	[{"id":254,"address":"улица Бакер село Кубиязы, Аскинский район, Республика Башкортостан, Россия","longitude":56.741618,"latitude":56.112754}]
+  	[{"address":"улица Бакер село Кубиязы, Аскинский район, Республика Башкортостан, Россия","longitude":56.741618,"latitude":56.112754}]
   ```
 
 
@@ -77,7 +77,7 @@ You can use Docker to start the geocoder @localhost:8080
 
   Result:
   ```json
-	[{"id":256,"address":"административный округ Мекка Саудовская Аравия","longitude":41.436553,"latitude":21.811146},{"id":257,"address":"Саудовская Аравия","longitude":45.725533,"latitude":22.848295}]
+  	[{"address":"административный округ Мекка Саудовская Аравия","longitude":41.436553,"latitude":21.811146},{"address":"Саудовская Аравия","longitude":45.725533,"latitude":22.848295}]
   ```
 * **In addition:**
 

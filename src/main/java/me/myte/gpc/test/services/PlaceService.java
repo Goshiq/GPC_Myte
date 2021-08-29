@@ -9,16 +9,18 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
 public class PlaceService {
 
     private final PlaceRepository placeRepository;
+
+    public PlaceService(PlaceRepository placeRepository) {
+        this.placeRepository = placeRepository;
+    }
 
     public Place    findById(long id) {
         Optional<Place> place = placeRepository.findById(id);
         return (place.orElse(null));
     }
-
 
     public void     add(Place place) {
         placeRepository.save(place);

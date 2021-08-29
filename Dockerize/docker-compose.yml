@@ -8,8 +8,8 @@ services:
     ports:
       - "5432:5432"
  gpc:
- 	build: .
-	ports:
+    build: .
+    ports:
       - "8080:8080"
     depends_on:
       - db

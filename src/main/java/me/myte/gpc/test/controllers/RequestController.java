@@ -17,11 +17,11 @@ import java.util.List;
 @RequestMapping("/search")
 public class RequestController {
 
-    @Autowired
-    private RequestService requestService;
+    private final RequestService requestService;
 
-    @Autowired
-    private PlaceService placeService;
+    public RequestController(RequestService requestService) {
+        this.requestService = requestService;
+    }
 
     @GetMapping("/show")
     public List<Request> showAll() {

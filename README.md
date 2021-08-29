@@ -7,16 +7,16 @@ Geo-position converter for Myte contest\
 
 You can use Docker to start the geocoder @localhost:8080
 - Clone the project to the local machine.
-- Execute the script:
+- Execute the script from directory <b>Dockerize</b>:
 ```bash
-cd ./Dockerize && ./start_app.sh && cd ..
+./start_app.sh
 ```
 - Now you can send GET-requests
 
 If you need to update *.jar file:
 - Execute the script:
 ```bash
-cd ./Dockerize && ./update_jar_and_start.sh && cd ..
+./update_jar_and_start.sh
 ```
 
 ----
@@ -86,6 +86,11 @@ cd ./Dockerize && ./update_jar_and_start.sh && cd ..
   	[{"address":"административный округ Мекка Саудовская Аравия","longitude":41.436553,"latitude":21.811146},{"address":"Саудовская Аравия","longitude":45.725533,"latitude":22.848295}]
   ```
 * **In addition:**
+
+  You can monitor the applicaton by Actuator. All metrics are enabled:
+  ```http
+	http://localhost:8080/actuator
+  ```
 
   To get requests history you can use:
   ```http

@@ -7,7 +7,7 @@ https://myte.me/tasks/RtngmS04tLWEPKTfvUd0
 
 * **URL**
 
-  /search/new/<your request here>
+  /search/new/`your_request_here`
   
   The request should be:\
   `- a string with address;

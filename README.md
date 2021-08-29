@@ -8,14 +8,6 @@ https://myte.me/tasks/RtngmS04tLWEPKTfvUd0
 * **URL**
 
   /search/new/`your_request_here`
-  
-  The request should be:\
-  `- a string with address;
-  `
-
-  or\
-  `- two numbers separated by space to search the place with coordinates.
-  `
 
 * **Method:**
 
@@ -25,7 +17,11 @@ https://myte.me/tasks/RtngmS04tLWEPKTfvUd0
 
    **Required:**
 
-   `id=[integer]`
+  `- a string with address;
+  `
+  or\
+  `- two numbers separated by space to search the place with coordinates.
+  `
 
 * **Data Params**
 
@@ -34,7 +30,7 @@ https://myte.me/tasks/RtngmS04tLWEPKTfvUd0
 * **Success Response for request: /search/new/23 12**
 
   * **Code:** 200 <br />
-    **Content:** `[{"id":248,"address":"Центральный Дарфур Судан","longitude":23.496155,"latitude":12.430016},{"id":249,"address":"Судан","longitude":30.296725,"latitude":17.977449}]'
+    **Content:** `[{"id":248,"address":"Центральный Дарфур Судан","longitude":23.496155,"latitude":12.430016},{"id":249,"address":"Судан","longitude":30.296725,"latitude":17.977449}]`
 
 * **Error Response:**
 

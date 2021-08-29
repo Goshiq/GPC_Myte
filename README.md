@@ -46,13 +46,12 @@ https://myte.me/tasks/RtngmS04tLWEPKTfvUd0
 
 * **Examples:**
 
+  Searching by address:
   ```javascript
-    $.ajax({
-      url: "/users/1",
-      dataType: "json",
-      type : "GET",
-      success : function(r) {
-        console.log(r);
-      }
-    });
+	http://localhost:8080/search/new/Baker street
+  ```
+
+  result:
+  ```json
+	[{"id":254,"address":"улица Бакер село Кубиязы, Аскинский район, Республика Башкортостан, Россия","longitude":56.741618,"latitude":56.112754}]
   ```

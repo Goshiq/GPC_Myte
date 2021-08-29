@@ -69,6 +69,7 @@ You can use Docker to start the geocoder @localhost:8080
 	[{"id":254,"address":"улица Бакер село Кубиязы, Аскинский район, Республика Башкортостан, Россия","longitude":56.741618,"latitude":56.112754}]
   ```
 
+
   Searching by coordinates:
   ```http
 	http://localhost:8080/search/new/42 21
@@ -77,4 +78,25 @@ You can use Docker to start the geocoder @localhost:8080
   Result:
   ```json
 	[{"id":256,"address":"административный округ Мекка Саудовская Аравия","longitude":41.436553,"latitude":21.811146},{"id":257,"address":"Саудовская Аравия","longitude":45.725533,"latitude":22.848295}]
+  ```
+* **In addition:**
+
+  To get requests history you can use:
+  ```http
+	http://localhost:8080/search/show
+  ```
+
+  Add request-id to get this one (if exists):
+  ```http
+	http://localhost:8080/search/show/128
+  ```
+
+  To get all cached addresses:
+  ```http
+	http://localhost:8080/place/show
+  ```
+
+  To get the only one cached addresse (if exists):
+  ```http
+	http://localhost:8080/place/show/256
   ```

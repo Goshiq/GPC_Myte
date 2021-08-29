@@ -9,10 +9,11 @@ https://myte.me/tasks/RtngmS04tLWEPKTfvUd0
 
   /search/new/<your request here>
   
-  The request should be:
+  The request should be:\
   `- a string with address;
   `
-  or
+
+  or\
   `- two numbers separated by space to search the place with coordinates.
   `
 

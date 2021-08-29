@@ -1,15 +1,18 @@
 **GPC_Myte**
 
-* Geo-position converter for Myte contest\
+Geo-position converter for Myte contest\
 	https://myte.me/tasks/RtngmS04tLWEPKTfvUd0
+----
 
-* You can use Docker to start the geocoder @localhost
+You can use Docker to start the geocoder @localhost
 - Get the project to local machine.
-- Start the script:
+- Start the script from root:
 ```bash
-	./Dockerize/start_app.sh
+./Dockerize/start_app.sh
 ```
 
+----
+**GPC_Myte API**
 ----
   Returns json data with result of searching the map point by coordinates or its address.
 

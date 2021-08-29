@@ -47,11 +47,21 @@ https://myte.me/tasks/RtngmS04tLWEPKTfvUd0
 * **Examples:**
 
   Searching by address:
-  ```javascript
+  ```http
 	http://localhost:8080/search/new/Baker street
   ```
 
-  result:
+  Result:
   ```json
 	[{"id":254,"address":"улица Бакер село Кубиязы, Аскинский район, Республика Башкортостан, Россия","longitude":56.741618,"latitude":56.112754}]
+  ```
+
+  Searching by coordinates:
+  ```http
+	http://localhost:8080/search/new/42 21
+  ```
+
+  Result:
+  ```json
+	[{"id":256,"address":"административный округ Мекка Саудовская Аравия","longitude":41.436553,"latitude":21.811146},{"id":257,"address":"Саудовская Аравия","longitude":45.725533,"latitude":22.848295}]
   ```

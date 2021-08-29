@@ -86,7 +86,7 @@ You can use Docker to start the geocoder @localhost:8080
 	http://localhost:8080/search/show
   ```
 
-  Add request-id to get this one (if exists):
+  Add request-id to get the only one (if exists):
   ```http
 	http://localhost:8080/search/show/128
   ```
@@ -96,7 +96,7 @@ You can use Docker to start the geocoder @localhost:8080
 	http://localhost:8080/place/show
   ```
 
-  To get the only one cached addresse (if exists):
+  To get the only one cached address (if exists):
   ```http
 	http://localhost:8080/place/show/256
   ```

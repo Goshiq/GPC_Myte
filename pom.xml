@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>me.myte.gpc</groupId>
-    <artifactId>test</artifactId>
+    <artifactId>GPC_myte</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gpc</name>
     <description>A solution for the contest @ myte.me</description>

@@ -8,7 +8,6 @@ import me.myte.gpc.test.repositories.PlaceRepository;
 import me.myte.gpc.test.repositories.RequestRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 

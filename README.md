@@ -11,7 +11,7 @@ You can use Docker to start the geocoder @localhost:8080
 ```bash
 ./start_app.sh
 ```
-- Now you can send GET-requests
+- Now you can send GET-requests (examples below)
 
 If you need to update *.jar file:
 - Execute the script:

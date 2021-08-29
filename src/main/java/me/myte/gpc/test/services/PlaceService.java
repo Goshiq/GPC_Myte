@@ -1,6 +1,5 @@
 package me.myte.gpc.test.services;
 
-import lombok.AllArgsConstructor;
 import me.myte.gpc.test.models.Place;
 import me.myte.gpc.test.repositories.PlaceRepository;
 import org.springframework.stereotype.Service;

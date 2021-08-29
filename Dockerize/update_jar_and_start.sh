@@ -1,7 +1,6 @@
 #!/bin/sh
 
-cp ../target/*jar .
-docker pull postgres
+rm -rf *.jar
 docker rm -f dockerize_gpc_1
 docker rmi -f dockerize_gpc
-docker-compose up
+./start_app.sh

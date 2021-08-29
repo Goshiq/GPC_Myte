@@ -32,28 +32,28 @@ public class RequestService {
     }
 
     public List<Place> findByCoordinates(Double[] coordinates) {
-        List<Place> place = ExternalAPI.findByCoordinates(coordinates);
-        return savePlaces(place);
+        List<Place> places = ExternalAPI.findByCoordinates(coordinates);
+        return savePlaces(places);
     }
 
     public List<Place> findByString(String request) {
-        List<Place> place = ExternalAPI.findByAddress(request);
-        return savePlaces(place);
+        List<Place> places = ExternalAPI.findByAddress(request);
+        return savePlaces(places);
     }
 
-    private List<Place> savePlaces(List<Place> place) {
-        if (place.size() != 0) {
-            log.info("Found: " + place.size());
-            List<Place> added = place.stream()
+    private List<Place> savePlaces(List<Place> places) {
+        if (places.size() != 0) {
+            log.info("Found: " + places.size());
+            List<Place> added = places.stream()
                     .filter(a -> placeRepository.findByAddressAndLongitudeAndLatitude(a.getAddress(), a.getLongitude(), a.getLatitude()).isEmpty())
                     .peek(placeRepository::save)
                     .collect(Collectors.toList());
             log.info("Saved " + added.size() + " results to the base."
-                    + (place.size() > added.size() ? " " + (place.size() - added.size()) + " ignored.": ""));
+                    + (places.size() > added.size() ? " " + (places.size() - added.size()) + " ignored.": ""));
         } else {
             log.warn("Nothing found");
         }
-        return place;
+        return places;
     }
 
     public List<Request> findAll() {

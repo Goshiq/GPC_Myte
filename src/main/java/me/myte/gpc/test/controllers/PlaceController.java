@@ -3,7 +3,6 @@ package me.myte.gpc.test.controllers;
 import lombok.extern.slf4j.Slf4j;
 import me.myte.gpc.test.models.Place;
 import me.myte.gpc.test.services.PlaceService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

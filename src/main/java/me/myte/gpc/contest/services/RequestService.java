@@ -1,6 +1,6 @@
 package me.myte.gpc.contest.services;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j;
 import me.myte.gpc.contest.models.Place;
 import me.myte.gpc.contest.models.Request;
 import me.myte.gpc.contest.repositories.PlaceRepository;
@@ -12,7 +12,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@Slf4j
+@Log4j
 public class RequestService {
 
     private final RequestRepository requestRepository;

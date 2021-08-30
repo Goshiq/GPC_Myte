@@ -1,6 +1,6 @@
 package me.myte.gpc.contest.controllers;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j;
 import me.myte.gpc.contest.models.Place;
 import me.myte.gpc.contest.services.PlaceService;
 import org.springframework.http.HttpStatus;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@Slf4j
+@Log4j
 @RequestMapping("/place/show")
 public class PlaceController {
 

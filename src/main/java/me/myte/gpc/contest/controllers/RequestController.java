@@ -1,6 +1,6 @@
 package me.myte.gpc.contest.controllers;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j;
 import me.myte.gpc.contest.models.Place;
 import me.myte.gpc.contest.models.Request;
 import me.myte.gpc.contest.services.RequestService;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@Slf4j
+@Log4j
 @RequestMapping("/search")
 public class RequestController {
 

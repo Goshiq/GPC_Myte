@@ -65,49 +65,49 @@ If you need to update *.jar file:
 
 * **Examples:**
 
-  Searching by address:
+  * **Searching by address:**
   ```http
 	http://localhost:8080/search/new/Baker street
   ```
 
-  Result:
+  * **Result:**
   ```json
   	[{"address":"улица Бакер село Кубиязы, Аскинский район, Республика Башкортостан, Россия","longitude":56.741618,"latitude":56.112754}]
   ```
 
 
-  Searching by coordinates:
+  * **Searching by coordinates:**
   ```http
 	http://localhost:8080/search/new/42 21
   ```
 
-  Result:
+  * **Result:**
   ```json
   	[{"address":"административный округ Мекка Саудовская Аравия","longitude":41.436553,"latitude":21.811146},{"address":"Саудовская Аравия","longitude":45.725533,"latitude":22.848295}]
   ```
 * **In addition:**
 
-  You can monitor the applicaton by Actuator. All metrics are enabled:
+  * **To monitor the application by Actuator. All metrics are enabled:**
   ```http
 	http://localhost:8080/actuator
   ```
 
-  To get requests history you can use:
+  * **To get requests history you can use:**
   ```http
 	http://localhost:8080/search/show
   ```
 
-  Add request-id to get the only one (if exists):
+  * **Add request-id to get the only one (if exists):**
   ```http
 	http://localhost:8080/search/show/128
   ```
 
-  To get all cached addresses:
+  * **To get all cached addresses:**
   ```http
 	http://localhost:8080/place/show
   ```
 
-  To get the only one cached address (if exists):
+  * **To get the only one cached address (if exists):**
   ```http
 	http://localhost:8080/place/show/256
   ```

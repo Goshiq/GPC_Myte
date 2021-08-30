@@ -1,4 +1,4 @@
-package me.myte.gpc.test.models;
+package me.myte.gpc.contest.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

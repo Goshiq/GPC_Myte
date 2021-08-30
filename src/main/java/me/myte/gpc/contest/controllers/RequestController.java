@@ -1,11 +1,9 @@
-package me.myte.gpc.test.controllers;
+package me.myte.gpc.contest.controllers;
 
 import lombok.extern.slf4j.Slf4j;
-import me.myte.gpc.test.models.Place;
-import me.myte.gpc.test.models.Request;
-import me.myte.gpc.test.services.PlaceService;
-import me.myte.gpc.test.services.RequestService;
-import org.springframework.beans.factory.annotation.Autowired;
+import me.myte.gpc.contest.models.Place;
+import me.myte.gpc.contest.models.Request;
+import me.myte.gpc.contest.services.RequestService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

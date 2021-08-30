@@ -1,4 +1,4 @@
-package me.myte.gpc.test;
+package me.myte.gpc.contest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

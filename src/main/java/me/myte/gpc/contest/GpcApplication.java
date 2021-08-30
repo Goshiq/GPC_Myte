@@ -1,4 +1,4 @@
-package me.myte.gpc.test;
+package me.myte.gpc.contest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

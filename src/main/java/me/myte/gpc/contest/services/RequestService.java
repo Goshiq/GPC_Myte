@@ -1,10 +1,10 @@
-package me.myte.gpc.test.services;
+package me.myte.gpc.contest.services;
 
 import lombok.extern.slf4j.Slf4j;
-import me.myte.gpc.test.models.Place;
-import me.myte.gpc.test.models.Request;
-import me.myte.gpc.test.repositories.PlaceRepository;
-import me.myte.gpc.test.repositories.RequestRepository;
+import me.myte.gpc.contest.models.Place;
+import me.myte.gpc.contest.models.Request;
+import me.myte.gpc.contest.repositories.PlaceRepository;
+import me.myte.gpc.contest.repositories.RequestRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

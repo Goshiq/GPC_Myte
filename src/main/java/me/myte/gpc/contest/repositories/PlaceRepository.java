@@ -1,11 +1,9 @@
-package me.myte.gpc.test.repositories;
+package me.myte.gpc.contest.repositories;
 
-import me.myte.gpc.test.models.Place;
+import me.myte.gpc.contest.models.Place;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Repository

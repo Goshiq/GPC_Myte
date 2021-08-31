@@ -9,6 +9,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import javax.annotation.Resource;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
@@ -23,7 +25,9 @@ class PlaceRepositoryTest {
         Place place = new Place("Some street", 1D, 2D);
         placeRepository.save(place);
 
-        Place testPlace = placeRepository.findByAddressAndLongitudeAndLatitude(place.getAddress(), place.getLongitude(), place.getLatitude()).get();
-        assertNotNull(testPlace);
+        Optional<Place> testPlace = placeRepository.findByAddressAndLongitudeAndLatitude(place.getAddress(), place.getLongitude(), place.getLatitude());
+        assertTrue(testPlace.isPresent());
+        testPlace = placeRepository.findByAddressAndLongitudeAndLatitude("", 0D, 0D);
+        assertFalse(testPlace.isPresent());
     }
 }

@@ -18,7 +18,7 @@ public class Place {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)  // uncomment if you want to hide the place id
     private long    id;
 
     public Place(String address, Double longitude, Double latitude) {

@@ -13,12 +13,6 @@ You can use Docker to start the geocoder @localhost:8080
 ```
 - Now you can send GET-requests (examples below)
 
-If you need to update *.jar file:
-- Execute the script:
-```bash
-./update_jar_and_start.sh
-```
-
 ----
 **GPC_Myte API**
 ----

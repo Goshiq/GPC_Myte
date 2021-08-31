@@ -8,7 +8,9 @@ services:
     ports:
       - "5432:5432"
  gpc:
-    build: .
+    build:
+      context: ..
+      dockerfile: ./Dockerize/Dockerfile
     ports:
       - "8080:8080"
     depends_on:

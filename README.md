@@ -7,7 +7,7 @@ Geo-position converter for Myte contest\
 
 You can use Docker to start the geocoder @localhost:8080
 - Clone the project to the local machine.
-- Execute the script from directory <b>Dockerize</b>:
+- Execute the script:
 ```bash
 ./start_app.sh
 ```

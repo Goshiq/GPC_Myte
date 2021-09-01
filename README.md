@@ -44,12 +44,12 @@ You can use Docker to start the geocoder @localhost:8080
 * **Success Response:**
 
   * **Request:**
-  	``/search/new/23 12``
+  	``/search/new/12 34``
 
   * **Code:** 200 <br />
     **Content:**
 	```json
-	[{"address":"Уаддаи Чад","longitude":21.274999,"latitude":12.799513},{"address":"Чад","longitude":18.724699,"latitude":15.339032}]
+	[{"id":16,"address":"провинция Голубой Нил Судан","latitude":11.264303,"longitude":34.124114},{"id":17,"address":"Судан","latitude":17.977449,"longitude":30.296725}]
 	```
 
 * **Error Response:**

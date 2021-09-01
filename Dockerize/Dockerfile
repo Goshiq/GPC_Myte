@@ -12,7 +12,7 @@ ENV MAVEN_HOME /usr/share/maven
 ADD . .
 
 RUN mvn -N io.takari:maven:wrapper \
-  && mvn clean package -Dmaven.test.skip
+  && mvn clean package
 
 EXPOSE 8080
 

@@ -50,11 +50,11 @@ class PlaceServiceTest {
     void findAll() {
         List<Place> places = placeRepository.findAll();
 
-        assertEquals(0, places.size());
+        int size = places.size();
         placeRepository.save(new Place("", 1D, 1D));
         placeRepository.save(new Place("", 1D, 1D));
         placeRepository.save(new Place("", 1D, 1D));
         places = placeRepository.findAll();
-        assertEquals(3, places.size());
+        assertEquals(size + 3, places.size());
     }
 }

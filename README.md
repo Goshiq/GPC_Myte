@@ -66,18 +66,18 @@ You can use Docker to start the geocoder @localhost:8080
 
   * **Result:**
   ```json
-  	[{"address":"улица Бакер село Кубиязы, Аскинский район, Республика Башкортостан, Россия","longitude":56.741618,"latitude":56.112754}]
+    [{"id":14,"address":"улица Бакер село Кубиязы, Аскинский район, Республика Башкортостан, Россия","latitude":56.112754,"longitude":56.741618}]
   ```
 
 
   * **Searching by coordinates:**
   ```http
-	http://localhost:8080/search/new/42 21
+	http://localhost:8080/search/new/21 42
   ```
 
   * **Result:**
   ```json
-  	[{"address":"административный округ Мекка Саудовская Аравия","longitude":41.436553,"latitude":21.811146},{"address":"Саудовская Аравия","longitude":45.725533,"latitude":22.848295}]
+    [{"id":33,"address":"административный округ Мекка Саудовская Аравия","latitude":21.811146,"longitude":41.436553},{"id":34,"address":"Саудовская Аравия","latitude":22.848295,"longitude":45.725533}]
   ```
 * **In addition:**
 

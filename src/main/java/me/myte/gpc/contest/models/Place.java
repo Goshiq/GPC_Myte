@@ -29,7 +29,8 @@ public class Place {
 
     private String  address;
 
+    private Double  latitude;
+
     private Double  longitude;
 
-    private Double  latitude;
 }

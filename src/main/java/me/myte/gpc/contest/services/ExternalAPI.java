@@ -33,7 +33,7 @@ public class ExternalAPI {
     }
 
     public static List<Place> findByCoordinates(Double[] coords) {
-        url = prefix + coords[0] + "," + coords[1];
+        url = prefix + coords[1] + "," + coords[0]; // there is a mistake @ Yandex API with longitude and latitude
         newPlace = WebClient.create()
                 .get()
                 .uri(url)
